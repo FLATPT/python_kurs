@@ -14,22 +14,18 @@ print("\n*** Temperatur omvandlare from Celsius till Fahrenheit ***\n")
 
 
 temperature_type = input("Skriv 'C' for att ange temperatur i Celsius eller 'F' for att ange temperatur i Fahrenheit: ")
-temperature_value =  float(input("Skriv in en temperaturen: "))
-
-
-#Räkna temperaturen till grader Fahrenheit
-celsius_calculation = float(temperature_value -32)/1.8
-fahrenheit_calculation = float(1.8 * temperature_value + 32)
 
 if temperature_type == "C" or temperature_type == "c":
-    print("Det blir " + str(fahrenheit_calculation)+ " grader Fahrenheit.")
+   temperature_value =  float(input("Skriv in en temperatur i grader Celsius: "))
+   fahrenheit_calculation = float(1.8 * temperature_value + 32)
+   print("Det blir " + str(fahrenheit_calculation) + " grader Fahrenheit.")
+
+
 elif temperature_type == "F" or temperature_type == "f":
+    temperature_value =  float(input("Skriv in en temperatur i grader Fahrenheit: "))
+    celsius_calculation = float(temperature_value - 32) / 1.8
     print("Det blir " + str(celsius_calculation) + " grader Celsius.")
-
-
-# ****    TO DO  *****
-if celsius_calculation < 10:
-    print("Sätt på vinterkläder!")
-
-elif celsius_calculation >= 20:
-    print("Packa badkläder!")
+    if celsius_calculation < 10:
+        print("Sätt på vinterkläder!")
+    elif celsius_calculation >= 20:
+        print("Packa badkläder!")

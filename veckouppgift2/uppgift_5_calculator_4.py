@@ -10,7 +10,16 @@ tal1=float(input("Ange tal 1: "))
 tal2=float(input("Ange tal 2: "))
 tal3=float(input("Ange tal 3: "))
 
-if tal1 == tal2 or tal1 == tal3 or tal2 == tal3:
-    print("Två av talen är lika")
-if tal1 == tal2 == tal3:
-    print("Alla tre talen är lika")
+ # Kolla om precis två tal är lika (otillåtet enligt uppgiften)
+if (tal1 == tal2 or tal2 == tal3 or tal1 == tal3) and not (tal1 == tal2 == tal3):
+    print("Inget mellersta tal.")
+else:
+# Hitta det mellersta talet om alla tre är olika eller alla tre är lika
+    if (tal2 <= tal1 <= tal3) or (tal3 <= tal1 <= tal2):
+        mellersta = tal1
+    elif (tal1 <= tal2 <= tal3) or (tal3 <= tal2 <= tal1):
+        mellersta = tal2
+    else:
+        mellersta = tal3
+
+    print("Mellersta talet är:", mellersta)
