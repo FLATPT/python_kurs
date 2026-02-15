@@ -39,20 +39,40 @@ print("\n***********************************************************************
 # Det kan också underlätta att skriva samtidigt med papper och penna.
 print("\nUppgift 1.4")
 print("Vad skrivs ut?")
-x = 0
-y = 1
-while y < 10:
-    if y % 2 == 0:
-        x -= y        # Tips:sätt en brytpunkt här
-    else:
-        x += y * y  # och här
-print("SVAR: ")
+
+# x = 0
+# y = 1
+# while y < 10:
+#     if y % 2 == 0: # Om y är jämnt, det vill säga delbart med 2 utan rest, så körs koden i if-satsen
+#         x -= y        # Tips:sätt en brytpunkt här
+#     else:             # Om y är udda, det vill säga inte delbart med 2 utan rest, så körs koden i else-satsen
+#         x += y * y    # Tips:sätt en brytpunkt här
+
+print("SVAR: y=1 och kommer alltid att vara udda, så x kommer att öka med y*y varje gång. Programmet kommer inte att sluta köras då y är alltid 1.")
 print("\n***********************************************************************************")
 
 
-print("\nUppgift 1.5")
+
 #5 Vad skrivs ut?
 #Kan du göra om koden så att den skriver ut "time" i stället?
+print("\nUppgift 1.5")
 message ="its_time_to_get_coding"
 print(message[3:7])
-#SVAR:
+
+print("SVAR: _tim")
+print("\n***********************************************************************************")
+
+
+#6 Vad skrivs ut?
+#Kan du flytta linjen ett steg åt höger?
+print("\nUppgift 1.6")
+for y in range(1, 7):
+    s = ""
+    for x in range(1, 9):
+        if x == y:
+            s += "#"
+        else:
+            s += "."
+    print(s)
+print("\nSVAR: #.......,.#......,..#.....,...#....,....#...,.....#..")
+print("\n***********************************************************************************")
